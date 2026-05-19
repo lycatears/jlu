@@ -52,7 +52,8 @@ To be honest，很遗憾，我也不知道。
 - 部分模板、代码等其他相关材料。
 
 ## 致谢
-数字逻辑课程相关内容由 花鸟风月 提供
+数字逻辑课程相关内容，数据结构2024版讲义由 花鸟风月 提供
 
 ## 友情链接
 [花鸟风月](https://github.com/sorastyx/JLU-)
+[随处可见的笨蛋](https://github.com/wanrenhuifu/JLU)
