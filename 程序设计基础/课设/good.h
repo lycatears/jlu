@@ -2,16 +2,16 @@
 
 struct item
 {
-    int     id;         //±àºÅ
-    int     volume;     //Ìå»ı
-    char    brand[100]; //Æ·ÅÆ
-    int     number;     //°ü×°ÄÚÃ¿ÏäÊıÁ¿
-    double  in_price;   //½ø»õ¼Û¸ñ
-    double  out_price;  //ÊÛÂô¼Û¸ñ
-    char    zhizaoshang[100];   //ÖÆÔìÉÌ
-    char    gonghuoshang[100];  //¹©»õÉÌ
-    int     storage;            //¿â´æ
-    int     duration;           //±£ÖÊÆÚ
+    int     id;         //ç¼–å·
+    int     volume;     //ä½“ç§¯
+    char    brand[100]; //å“ç‰Œ
+    int     number;     //åŒ…è£…å†…æ¯ç®±æ•°é‡
+    double  in_price;   //è¿›è´§ä»·æ ¼
+    double  out_price;  //å”®å–ä»·æ ¼
+    char    zhizaoshang[100];   //åˆ¶é€ å•†
+    char    gonghuoshang[100];  //ä¾›è´§å•†
+    int     storage;            //åº“å­˜
+    int     duration;           //ä¿è´¨æœŸ
 };
 
 typedef struct ItemNode
@@ -25,9 +25,9 @@ struct buyitem
     int goods_id;
     int goods_volume;
     char goods_brand[100];
-    int goods_number; // Ò»ÏäµÄÆ¿Êı
+    int goods_number; // ä¸€ç®±çš„ç“¶æ•°
     double goods_price;
-    int num; // ¹ºÂòµÄÊıÁ¿
+    int num; // è´­ä¹°çš„æ•°é‡
 };
 typedef struct cart
 {
