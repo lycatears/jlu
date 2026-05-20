@@ -1,0 +1,31 @@
+<RCC>
+    <qresource prefix="/">
+        <file>res/add.png</file>
+        <file>res/allSelect.png</file>
+        <file>res/calendar.png</file>
+        <file>res/cancel.png</file>
+        <file>res/clock.png</file>
+        <file>res/deselect.png</file>
+        <file>res/download.png</file>
+        <file>res/edit.png</file>
+        <file>res/exit.png</file>
+        <file>res/exportSelected.png</file>
+        <file>res/exportToExcel.png</file>
+        <file>res/eyes.png</file>
+        <file>res/folder.png</file>
+        <file>res/icon.png</file>
+        <file>res/multipleInsert.png</file>
+        <file>res/NO.png</file>
+        <file>res/OK.png</file>
+        <file>res/refresh.png</file>
+        <file>res/remove.png</file>
+        <file>res/save.png</file>
+        <file>res/search.png</file>
+        <file>res/setPhoto.png</file>
+        <file>res/singleInsert.png</file>
+        <file>res/subqueryInsert.png</file>
+        <file>res/worker.png</file>
+        <file>res/down.png</file>
+        <file>res/up.png</file>
+    </qresource>
+</RCC>
