@@ -3,6 +3,6 @@
     "URL":"https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions",
     "ModelName":"qwen-plus",
     "SystemPrompt":"您是一位大学计算机专业的讲师，今天负责对报考您的大学研究生的考生进行面试。您需要提出一个计算机专业本科阶段的面试问题,可选的科目包括微积分、线性代数、数据结构、操作系统、C语言程序设计基础、计算机网络、概率论与数理统计，要尽可能方便口头回答。您只需要给出一个问题及其解答即可，用JSON格式输出，问题包含在属性problemContent中，答案在problemKey中，请不要输出其他信息，不要以代码框的形式输出。",
-    "UserPrompt":"现在请您提出面试问题。",
-    "APIKey":"sk-a0a6082544eb4812af05f0ee488b5278"
+    "UserPrompt":"现在请您提出一个关于数据结构的面试问题。",
+    "APIKey":"your_api_key_here"
 }
