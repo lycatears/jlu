@@ -1,0 +1,928 @@
+[
+    {
+        "title": "第1页",
+        "cards": [
+            {
+                "name": "植物基本信息",
+                "problems": [
+                    {
+                        "type": "text",
+                        "name": "植物种类、品种",
+                        "placeholder": "请输入植物品种名称"
+                    },
+                    {
+                        "type": "text",
+                        "name": "种植时间",
+                        "placeholder": "例如：一年前、三个月前"
+                    },
+                    {
+                        "type": "text",
+                        "name": "种植地点",
+                        "placeholder": "例如：室内、室外"
+                    },
+                    {
+                        "type": "text",
+                        "name": "植物用途",
+                        "placeholder": "例如：观赏、食用、经济作物"
+                    }
+                ]
+            },
+            {
+                "name": "基本病史",
+                "problems": [
+                    {
+                        "type": "text",
+                        "name": "发病时间",
+                        "placeholder": "例如：2天前、一周前"
+                    },
+                    {
+                        "type": "text",
+                        "name": "发病症状初现部位",
+                        "placeholder": ""
+                    },
+                    {
+                        "type": "text",
+                        "name": "同批植株发病情况",
+                        "placeholder": "整体发病比例、发病区域分布等"
+                    },
+                    {
+                        "type": "text",
+                        "name": "施用过何种药剂",
+                        "placeholder": "农药、肥料、植物生长调节剂等"
+                    },
+                    {
+                        "type": "text",
+                        "name": "土壤类型",
+                        "placeholder": "壤土、砂土、黏土等"
+                    },
+                    {
+                        "type": "text",
+                        "name": "施肥情况",
+                        "placeholder": "肥料种类、施肥频率、施肥量"
+                    },
+                    {
+                        "type": "text",
+                        "name": "灌溉情况",
+                        "placeholder": "灌溉频率、灌溉量、灌溉方式"
+                    },
+                    {
+                        "type": "text",
+                        "name": "光照条件",
+                        "placeholder": "全日照、半日照、遮阴等"
+                    },
+                    {
+                        "type": "text",
+                        "name": "通风情况",
+                        "placeholder": "良好、一般、较差等"
+                    },
+                    {
+                        "type": "multipleChoice",
+                        "name": "植株外观",
+                        "options": [
+                            {
+                                "value": "正常",
+                                "label": "正常"
+                            },
+                            {
+                                "value": "矮小",
+                                "label": "矮小"
+                            },
+                            {
+                                "value": "徒长",
+                                "label": "徒长"
+                            },
+                            {
+                                "value": "扭曲",
+                                "label": "扭曲"
+                            },
+                            {
+                                "value": "畸形",
+                                "label": "畸形"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "multipleChoice",
+                        "name": "叶片状态",
+                        "options": [
+                            {
+                                "value": "发黄",
+                                "label": "发黄"
+                            },
+                            {
+                                "value": "发白",
+                                "label": "发白"
+                            },
+                            {
+                                "value": "发紫",
+                                "label": "发紫"
+                            },
+                            {
+                                "value": "发红",
+                                "label": "发红"
+                            },
+                            {
+                                "value": "干枯",
+                                "label": "干枯"
+                            },
+                            {
+                                "value": "卷曲",
+                                "label": "卷曲"
+                            },
+                            {
+                                "value": "皱缩",
+                                "label": "皱缩"
+                            },
+                            {
+                                "value": "穿孔",
+                                "label": "穿孔"
+                            },
+                            {
+                                "value": "有斑点",
+                                "label": "有斑点"
+                            },
+                            {
+                                "value": "正常",
+                                "label": "正常"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "text",
+                        "name": "叶片状态备注",
+                        "placeholder": "描述斑点形状、颜色、大小"
+                    },
+                    {
+                        "type": "mulipleChoice",
+                        "name": "叶片质地",
+                        "options": [
+                            {
+                                "value": "变硬",
+                                "label": "变硬"
+                            },
+                            {
+                                "value": "变软",
+                                "label": "变软"
+                            },
+                            {
+                                "value": "变薄",
+                                "label": "变薄"
+                            },
+                            {
+                                "value": "变脆",
+                                "label": "变脆"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "text",
+                        "name": "叶序",
+                        "placeholder": "叶片排列是否整齐、有无错乱"
+                    },
+                    {
+                        "type": "multipleChoice",
+                        "name": "茎部状态",
+                        "options": [
+                            {
+                                "value": "细弱",
+                                "label": "细弱"
+                            },
+                            {
+                                "value": "粗壮",
+                                "label": "粗壮"
+                            },
+                            {
+                                "value": "中空",
+                                "label": "中空"
+                            },
+                            {
+                                "value": "有裂纹",
+                                "label": "有裂纹"
+                            },
+                            {
+                                "value": "有伤口",
+                                "label": "有伤口"
+                            },
+                            {
+                                "value": "变色",
+                                "label": "变色"
+                            },
+                            {
+                                "value": "正常",
+                                "label": "正常"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "text",
+                        "name": "茎部状态备注",
+                        "placeholder": "描述茎部颜色等信息"
+                    },
+                    {
+                        "type": "text",
+                        "name": "芽的状态",
+                        "placeholder": "饱满、干瘪、萌芽异常等"
+                    },
+                    {
+                        "type": "text",
+                        "name": "其他",
+                        "placeholder": "其他补充说明"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "title": "第2页",
+        "cards": [
+            {
+                "name": "花朵",
+                "problems": [
+                    {
+                        "type": "multipleChoice",
+                        "name": "花朵状态",
+                        "options": [
+                            {
+                                "value": "提前凋谢",
+                                "label": "提前凋谢"
+                            },
+                            {
+                                "value": "延迟开放",
+                                "label": "延迟开放"
+                            },
+                            {
+                                "value": "畸形",
+                                "label": "畸形"
+                            },
+                            {
+                                "value": "变色",
+                                "label": "变色"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "text",
+                        "name": "花朵颜色变化",
+                        "placeholder": ""
+                    },
+                    {
+                        "type": "text",
+                        "name": "花朵斑点情况",
+                        "placeholder": "描述斑点形状、颜色、大小"
+                    }
+                ]
+            },
+            {
+                "name": "果实",
+                "problems": [
+                    {
+                        "type": "multipleChoice",
+                        "name": "果实状态",
+                        "options": [
+                            {
+                                "value": "发育不良",
+                                "label": "发育不良"
+                            },
+                            {
+                                "value": "畸形",
+                                "label": "畸形"
+                            },
+                            {
+                                "value": "变色",
+                                "label": "变色"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "text",
+                        "name": "果实颜色变化",
+                        "placeholder": ""
+                    },
+                    {
+                        "type": "text",
+                        "name": "果实斑点情况",
+                        "placeholder": "描述斑点形状、颜色、大小"
+                    },
+                    {
+                        "type": "text",
+                        "name": "果实腐烂情况",
+                        "placeholder": "描述腐烂部位、程度"
+                    },
+                    {
+                        "type": "singleChoice",
+                        "name": "果实硬度",
+                        "options": [
+                            {
+                                "value": "变软",
+                                "label": "变软"
+                            },
+                            {
+                                "value": "变硬",
+                                "label": "变硬"
+                            },
+                            {
+                                "value": "正常",
+                                "label": "正常"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "根部",
+                "problems": [
+                    {
+                        "type": "multipleChoice",
+                        "name": "根部状态",
+                        "options": [
+                            {
+                                "value": "根系弱小",
+                                "label": "根系弱小"
+                            },
+                            {
+                                "value": "根系发达",
+                                "label": "根系发达"
+                            },
+                            {
+                                "value": "根部腐烂",
+                                "label": "根部腐烂"
+                            },
+                            {
+                                "value": "有根瘤",
+                                "label": "有根瘤"
+                            },
+                            {
+                                "value": "根部变色",
+                                "label": "根部变色"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "text",
+                        "name": "根部补充说明",
+                        "placeholder": "腐烂部位、程度，根部颜色等"
+                    },
+                    {
+                        "type": "multipleChoice",
+                        "name": "根际土壤状态",
+                        "options": [
+                            {
+                                "value": "颜色异常",
+                                "label": "颜色异常"
+                            },
+                            {
+                                "value": "气味异常",
+                                "label": "气味异常"
+                            },
+                            {
+                                "value": "板结",
+                                "label": "板结"
+                            },
+                            {
+                                "value": "疏松",
+                                "label": "疏松"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "其他",
+                "problems": [
+                    {
+                        "type": "text",
+                        "name": "其他补充说明"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "title": "第3页",
+        "cards": [
+            {
+                "name": "",
+                "problems": [
+                    {
+                        "type": "text",
+                        "name": "呼吸",
+                        "options": [
+                            {
+                                "value": "加快",
+                                "label": "加快"
+                            },
+                            {
+                                "value": "变慢",
+                                "label": "变慢"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "singleChoice",
+                        "name": "呼吸间隔",
+                        "options": [
+                            {
+                                "value": "变长",
+                                "label": "变长"
+                            },
+                            {
+                                "value": "变短",
+                                "label": "变短"
+                            },
+                            {
+                                "value": "正常",
+                                "label": "正常"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "singleChoice",
+                        "name": "呼吸状态",
+                        "options": [
+                            {
+                                "value": "费劲",
+                                "label": "费劲"
+                            },
+                            {
+                                "value": "轻松",
+                                "label": "轻松"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "mulipleChoice",
+                        "name": "鼻液",
+                        "options": [
+                            {
+                                "value": "无",
+                                "label": "无"
+                            },
+                            {
+                                "value": "单鼻孔",
+                                "label": "单鼻孔"
+                            },
+                            {
+                                "value": "双鼻孔",
+                                "label": "双鼻孔"
+                            },
+                            {
+                                "value": "清澈",
+                                "label": "清澈"
+                            },
+                            {
+                                "value": "粘稠",
+                                "label": "粘稠"
+                            },
+                            {
+                                "value": "发臭",
+                                "label": "发臭"
+                            },
+                            {
+                                "value": "发红",
+                                "label": "发红"
+                            },
+                            {
+                                "value": "铁锈色",
+                                "label": "铁锈色"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "mulipleChoice",
+                        "name": "咳嗽",
+                        "options": [
+                            {
+                                "value": "无",
+                                "label": "无"
+                            },
+                            {
+                                "value": "清脆",
+                                "label": "清脆"
+                            },
+                            {
+                                "value": "钝浊",
+                                "label": "钝浊"
+                            },
+                            {
+                                "value": "偶尔",
+                                "label": "偶尔"
+                            },
+                            {
+                                "value": "连续",
+                                "label": "连续"
+                            },
+                            {
+                                "value": "剧烈",
+                                "label": "剧烈"
+                            },
+                            {
+                                "value": "痛咳",
+                                "label": "痛咳"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "mulipleChoice",
+                        "name": "胸部触诊",
+                        "options": [
+                            {
+                                "value": "温度升高",
+                                "label": "温度升高"
+                            },
+                            {
+                                "value": "温度降低",
+                                "label": "温度降低"
+                            },
+                            {
+                                "value": "胸部不易触碰",
+                                "label": "胸部不易触碰"
+                            },
+                            {
+                                "value": "震颤",
+                                "label": "震颤"
+                            },
+                            {
+                                "value": "正常",
+                                "label": "正常"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "mulipleChoice",
+                        "name": "胸部听诊",
+                        "options": [
+                            {
+                                "value": "肺泡呼吸音增强夫夫声",
+                                "label": "肺泡呼吸音增强夫夫声"
+                            },
+                            {
+                                "value": "肺泡呼吸音减弱听不清",
+                                "label": "肺泡呼吸音减弱听不清"
+                            },
+                            {
+                                "value": "肺泡呼吸音消失听不到",
+                                "label": "肺泡呼吸音消失听不到"
+                            },
+                            {
+                                "value": "支气管呼吸音呵呵声",
+                                "label": "支气管呼吸音呵呵声"
+                            },
+                            {
+                                "value": "混合型呼吸音夫呵声",
+                                "label": "混合型呼吸音夫呵声"
+                            },
+                            {
+                                "value": "干罗音哨声笛声",
+                                "label": "干罗音哨声笛声"
+                            },
+                            {
+                                "value": "湿罗音漱口声",
+                                "label": "湿罗音漱口声"
+                            },
+                            {
+                                "value": "捻发声",
+                                "label": "捻发声"
+                            },
+                            {
+                                "value": "空翁声",
+                                "label": "空翁声"
+                            },
+                            {
+                                "value": "摩擦声",
+                                "label": "摩擦声"
+                            },
+                            {
+                                "value": "拍水声",
+                                "label": "拍水声"
+                            },
+                            {
+                                "value": "正常",
+                                "label": "正常"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "text",
+                        "name": "其他备注"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "title": "第4页",
+        "cards": [
+            {
+                "name": "进食",
+                "problems": [
+                    {
+                        "type": "singleChoice",
+                        "name": "食欲",
+                        "options": [
+                            {
+                                "value": "减弱",
+                                "label": "减弱"
+                            },
+                            {
+                                "value": "亢进",
+                                "label": "亢进"
+                            },
+                            {
+                                "value": "废绝",
+                                "label": "废绝"
+                            },
+                            {
+                                "value": "正常",
+                                "label": "正常"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "singleChoice",
+                        "name": "异常进食",
+                        "options": [
+                            {
+                                "value": "吃土",
+                                "label": "吃土"
+                            },
+                            {
+                                "value": "食仔",
+                                "label": "食仔"
+                            },
+                            {
+                                "value": "啄羽",
+                                "label": "啄羽"
+                            },
+                            {
+                                "value": "啄肛",
+                                "label": "啄肛"
+                            },
+                            {
+                                "value": "自咬",
+                                "label": "自咬"
+                            },
+                            {
+                                "value": "吞咽空气",
+                                "label": "吞咽空气"
+                            },
+                            {
+                                "value": "无",
+                                "label": "无"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "multipleChoice",
+                        "name": "采食",
+                        "options": [
+                            {
+                                "value": "舌唇不正常",
+                                "label": "舌唇不正常"
+                            },
+                            {
+                                "value": "吞咽困难",
+                                "label": "吞咽困难"
+                            },
+                            {
+                                "value": "反刍异常",
+                                "label": "反刍异常"
+                            },
+                            {
+                                "value": "呕吐",
+                                "label": "呕吐"
+                            },
+                            {
+                                "value": "正常",
+                                "label": "正常"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "消化",
+                "problems": [
+                    {
+                        "type": "multipleChoice",
+                        "name": "呕吐",
+                        "options": [
+                            {
+                                "value": "单次呕吐",
+                                "label": "单次呕吐"
+                            },
+                            {
+                                "value": "频繁呕吐",
+                                "label": "频繁呕吐"
+                            },
+                            {
+                                "value": "红色",
+                                "label": "红色"
+                            },
+                            {
+                                "value": "黄绿色",
+                                "label": "黄绿色"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "singleChoice",
+                        "name": "唾液",
+                        "options": [
+                            {
+                                "value": "增加",
+                                "label": "增加"
+                            },
+                            {
+                                "value": "减少",
+                                "label": "减少"
+                            },
+                            {
+                                "value": "消失",
+                                "label": "消失"
+                            },
+                            {
+                                "value": "正常",
+                                "label": "正常"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "singleChoice",
+                        "name": "肠道听诊",
+                        "options": [
+                            {
+                                "value": "增强",
+                                "label": "增强"
+                            },
+                            {
+                                "value": "减弱",
+                                "label": "减弱"
+                            },
+                            {
+                                "value": "消失",
+                                "label": "消失"
+                            },
+                            {
+                                "value": "不整",
+                                "label": "不整"
+                            },
+                            {
+                                "value": "金属性肠音",
+                                "label": "金属性肠音"
+                            },
+                            {
+                                "value": "正常",
+                                "label": "正常"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "multipleChoice",
+                        "name": "腹部触诊",
+                        "options": [
+                            {
+                                "value": "间歇疼痛",
+                                "label": "间歇疼痛"
+                            },
+                            {
+                                "value": "持续疼痛",
+                                "label": "持续疼痛"
+                            },
+                            {
+                                "value": "疼痛剧烈",
+                                "label": "疼痛剧烈"
+                            },
+                            {
+                                "value": "疼痛轻微",
+                                "label": "疼痛轻微"
+                            },
+                            {
+                                "value": "正常",
+                                "label": "正常"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "粪便",
+                "problems": [
+                    {
+                        "type": "text",
+                        "name": "粪便颜色"
+                    },
+                    {
+                        "type": "text",
+                        "name": "排便次数"
+                    },
+                    {
+                        "type": "text",
+                        "name": "粪量多少"
+                    }
+                ]
+            },
+            {
+                "name": "排尿",
+                "problems": [
+                    {
+                        "type": "singleChoice",
+                        "name": "尿量",
+                        "options": [
+                            {
+                                "value": "正常",
+                                "label": "正常"
+                            },
+                            {
+                                "value": "少尿",
+                                "label": "少尿"
+                            },
+                            {
+                                "value": "多尿",
+                                "label": "多尿"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "singleChoice",
+                        "name": "排尿难易",
+                        "options": [
+                            {
+                                "value": "正常",
+                                "label": "正常"
+                            },
+                            {
+                                "value": "易排",
+                                "label": "易排"
+                            },
+                            {
+                                "value": "难排",
+                                "label": "难排"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "text",
+                        "name": "排尿颜色"
+                    },
+                    {
+                        "type": "singleChoice",
+                        "name": "排尿气味",
+                        "options": [
+                            {
+                                "value": "正常",
+                                "label": "正常"
+                            },
+                            {
+                                "value": "臭味",
+                                "label": "臭味"
+                            },
+                            {
+                                "value": "烂苹果味",
+                                "label": "烂苹果味"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "其他备注",
+                "problems": [
+                    {
+                        "type": "text",
+                        "name": "备注"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "第5页",
+        "cards": [
+            {
+                "name": "其他化验结果",
+                "problems": [
+                    {
+                        "type": "text",
+                        "name": "血常规结果"
+                    },
+                    {
+                        "type": "text",
+                        "name": "X光结果"
+                    },
+                    {
+                        "type": "text",
+                        "name": "CT结果"
+                    },
+                    {
+                        "type": "text",
+                        "name": "B超结果"
+                    },
+                    {
+                        "type": "text",
+                        "name": "核磁共振结果"
+                    }
+                ]
+            }
+        ]
+    }
+]

@@ -1,0 +1,962 @@
+[
+    {
+        "title": "第1页",
+        "cards": [
+            {
+                "name": "基本信息",
+                "problems": [
+                    {
+                        "type": "text",
+                        "name": "动物种类、品种",
+                        "placeholder": "请输入动物的种类或者品种"
+                    },
+                    {
+                        "type": "singleChoice",
+                        "name": "动物性别",
+                        "options": [
+                            {
+                                "value": "公",
+                                "label": "公"
+                            },
+                            {
+                                "value": "母",
+                                "label": "母"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "text",
+                        "name": "动物年龄",
+                        "placeholder": "请输入动物年龄"
+                    },
+                    {
+                        "type": "text",
+                        "name": "动物用途",
+                        "placeholder": "请输入动物用途"
+                    }
+                ]
+            },
+            {
+                "name": "基本病史",
+                "problems": [
+                    {
+                        "type": "text",
+                        "name": "发病时间",
+                        "placeholder": "例如：2天前、3小时前"
+                    },
+                    {
+                        "type": "text",
+                        "name": "发病地点",
+                        "placeholder": "例如：室内、室外"
+                    },
+                    {
+                        "type": "text",
+                        "name": "畜群发病情况",
+                        "placeholder": ""
+                    },
+                    {
+                        "type": "text",
+                        "name": "用过何种药物",
+                        "placeholder": ""
+                    },
+                    {
+                        "type": "text",
+                        "name": "饲料组成",
+                        "placeholder": ""
+                    }
+                ]
+            },
+            {
+                "name": "当前状况",
+                "problems": [
+                    {
+                        "type": "singleChoice",
+                        "name": "精神状况",
+                        "options": [
+                            {
+                                "value": "兴奋",
+                                "label": "兴奋"
+                            },
+                            {
+                                "value": "沉郁",
+                                "label": "沉郁"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "singleChoice",
+                        "name": "营养状况",
+                        "options": [
+                            {
+                                "value": "肥胖",
+                                "label": "肥胖"
+                            },
+                            {
+                                "value": "良好",
+                                "label": "良好"
+                            },
+                            {
+                                "value": "消瘦",
+                                "label": "消瘦"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "singleChoice",
+                        "name": "姿势",
+                        "options": [
+                            {
+                                "value": "强迫站立",
+                                "label": "强迫站立"
+                            },
+                            {
+                                "value": "强迫躺卧",
+                                "label": "强迫躺卧"
+                            },
+                            {
+                                "value": "站立不稳",
+                                "label": "站立不稳"
+                            },
+                            {
+                                "value": "正常",
+                                "label": "正常"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "singleChoice",
+                        "name": "运动状况",
+                        "options": [
+                            {
+                                "value": "强迫行走",
+                                "label": "强迫行走"
+                            },
+                            {
+                                "value": "盲目行走",
+                                "label": "盲目行走"
+                            },
+                            {
+                                "value": "圆圈运动",
+                                "label": "圆圈运动"
+                            },
+                            {
+                                "value": "正常",
+                                "label": "正常"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "mulipleChoice",
+                        "name": "毛发",
+                        "options": [
+                            {
+                                "value": "脱毛",
+                                "label": "脱毛"
+                            },
+                            {
+                                "value": "部分脱毛",
+                                "label": "部分脱毛"
+                            },
+                            {
+                                "value": "颜色异常",
+                                "label": "颜色异常"
+                            },
+                            {
+                                "value": "大量出汗",
+                                "label": "大量出汗"
+                            },
+                            {
+                                "value": "正常",
+                                "label": "正常"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "singleChoice",
+                        "name": "皮肤状况",
+                        "options": [
+                            {
+                                "value": "红肿",
+                                "label": "红肿"
+                            },
+                            {
+                                "value": "点状出血",
+                                "label": "点状出血"
+                            },
+                            {
+                                "value": "片状出血",
+                                "label": "片状出血"
+                            },
+                            {
+                                "value": "溃疡",
+                                "label": "红溃疡肿"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "text",
+                        "name": "皮肤发病部位"
+                    }
+                ]
+            },
+            {
+                "name": "",
+                "problems": [
+                    {
+                        "type": "singleChoice",
+                        "name": "体温",
+                        "options": [
+                            {
+                                "value": "微热",
+                                "label": "微热"
+                            },
+                            {
+                                "value": "中热",
+                                "label": "中热"
+                            },
+                            {
+                                "value": "高热",
+                                "label": "高热"
+                            },
+                            {
+                                "value": "降低",
+                                "label": "降低"
+                            },
+                            {
+                                "value": "正常",
+                                "label": "正常"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "text",
+                        "name": "其他情况"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "title": "第2页",
+        "cards": [
+            {
+                "name": "",
+                "problems": [
+                    {
+                        "type": "singleChoice",
+                        "name": "心跳",
+                        "options": [
+                            {
+                                "value": "加快",
+                                "label": "加快"
+                            },
+                            {
+                                "value": "减慢",
+                                "label": "减慢"
+                            },
+                            {
+                                "value": "正常",
+                                "label": "正常"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "number",
+                        "name": "心跳数值",
+                        "placeholder": ""
+                    },
+                    {
+                        "type": "singleChoice",
+                        "name": "脉搏",
+                        "options": [
+                            {
+                                "value": "有力",
+                                "label": "有力"
+                            },
+                            {
+                                "value": "无力",
+                                "label": "无力"
+                            },
+                            {
+                                "value": "正常",
+                                "label": "正常"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "singleChoice",
+                        "name": "血压",
+                        "options": [
+                            {
+                                "value": "升高",
+                                "label": "升高"
+                            },
+                            {
+                                "value": "降低",
+                                "label": "降低"
+                            },
+                            {
+                                "value": "正常",
+                                "label": "正常"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "number",
+                        "name": "血压数值",
+                        "placeholder": ""
+                    },
+                    {
+                        "type": "singleChoice",
+                        "name": "眼结膜",
+                        "options": [
+                            {
+                                "value": "发红",
+                                "label": "发红"
+                            },
+                            {
+                                "value": "发白",
+                                "label": "发白"
+                            },
+                            {
+                                "value": "发黄",
+                                "label": "发黄"
+                            },
+                            {
+                                "value": "发紫",
+                                "label": "发紫"
+                            },
+                            {
+                                "value": "发黄",
+                                "label": "发黄"
+                            },
+                            {
+                                "value": "血管鼓起",
+                                "label": "血管鼓起"
+                            },
+                            {
+                                "value": "正常",
+                                "label": "正常"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "singleChoice",
+                        "name": "心脏叩诊变化",
+                        "options": [
+                            {
+                                "value": "相对浊音区增大",
+                                "label": "相对浊音区增大"
+                            },
+                            {
+                                "value": "相对浊音区减小",
+                                "label": "相对浊音区减小"
+                            },
+                            {
+                                "value": "绝对浊音区增大",
+                                "label": "绝对浊音区增大"
+                            },
+                            {
+                                "value": "绝对浊音区减小",
+                                "label": "绝对浊音区减小"
+                            },
+                            {
+                                "value": "正常",
+                                "label": "正常"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "singleChoice",
+                        "name": "心脏听诊变化",
+                        "options": [
+                            {
+                                "value": "第一心音增加",
+                                "label": "第一心音增加"
+                            },
+                            {
+                                "value": "第一心音减弱",
+                                "label": "第一心音减弱"
+                            },
+                            {
+                                "value": "第二心音增加",
+                                "label": "第二心音增加"
+                            },
+                            {
+                                "value": "第二心音减弱",
+                                "label": "第二心音减弱"
+                            },
+                            {
+                                "value": "正常",
+                                "label": "正常"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "singleChoice",
+                        "name": "心脏杂音",
+                        "options": [
+                            {
+                                "value": "吹风样",
+                                "label": "吹风样"
+                            },
+                            {
+                                "value": "锯木样",
+                                "label": "锯木样"
+                            },
+                            {
+                                "value": "口哨音",
+                                "label": "口哨音"
+                            },
+                            {
+                                "value": "摩擦音",
+                                "label": "摩擦音"
+                            },
+                            {
+                                "value": "拍水音",
+                                "label": "拍水音"
+                            },
+                            {
+                                "value": "正常",
+                                "label": "正常"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "text",
+                        "name": "其他备注",
+                        "placeholder": ""
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "title": "第3页",
+        "cards": [
+            {
+                "name": "呼吸",
+                "problems": [
+                    {
+                        "type": "singleChoice",
+                        "name": "呼吸",
+                        "options": [
+                            {
+                                "value": "加快",
+                                "label": "加快"
+                            },
+                            {
+                                "value": "变慢",
+                                "label": "变慢"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "singleChoice",
+                        "name": "呼吸间隔",
+                        "options": [
+                            {
+                                "value": "变长",
+                                "label": "变长"
+                            },
+                            {
+                                "value": "变短",
+                                "label": "变短"
+                            },
+                            {
+                                "value": "正常",
+                                "label": "正常"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "singleChoice",
+                        "name": "呼吸状态",
+                        "options": [
+                            {
+                                "value": "费劲",
+                                "label": "费劲"
+                            },
+                            {
+                                "value": "轻松",
+                                "label": "轻松"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "mulipleChoice",
+                        "name": "鼻液",
+                        "options": [
+                            {
+                                "value": "无",
+                                "label": "无"
+                            },
+                            {
+                                "value": "单鼻孔",
+                                "label": "单鼻孔"
+                            },
+                            {
+                                "value": "双鼻孔",
+                                "label": "双鼻孔"
+                            },
+                            {
+                                "value": "清澈",
+                                "label": "清澈"
+                            },
+                            {
+                                "value": "粘稠",
+                                "label": "粘稠"
+                            },
+                            {
+                                "value": "发臭",
+                                "label": "发臭"
+                            },
+                            {
+                                "value": "发红",
+                                "label": "发红"
+                            },
+                            {
+                                "value": "铁锈色",
+                                "label": "铁锈色"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "mulipleChoice",
+                        "name": "咳嗽",
+                        "options": [
+                            {
+                                "value": "无",
+                                "label": "无"
+                            },
+                            {
+                                "value": "清脆",
+                                "label": "清脆"
+                            },
+                            {
+                                "value": "钝浊",
+                                "label": "钝浊"
+                            },
+                            {
+                                "value": "偶尔",
+                                "label": "偶尔"
+                            },
+                            {
+                                "value": "连续",
+                                "label": "连续"
+                            },
+                            {
+                                "value": "剧烈",
+                                "label": "剧烈"
+                            },
+                            {
+                                "value": "痛咳",
+                                "label": "痛咳"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "mulipleChoice",
+                        "name": "胸部触诊",
+                        "options": [
+                            {
+                                "value": "温度升高",
+                                "label": "温度升高"
+                            },
+                            {
+                                "value": "温度降低",
+                                "label": "温度降低"
+                            },
+                            {
+                                "value": "胸部不易触碰",
+                                "label": "胸部不易触碰"
+                            },
+                            {
+                                "value": "震颤",
+                                "label": "震颤"
+                            },
+                            {
+                                "value": "正常",
+                                "label": "正常"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "mulipleChoice",
+                        "name": "胸部听诊",
+                        "options": [
+                            {
+                                "value": "肺泡呼吸音增强夫夫声",
+                                "label": "肺泡呼吸音增强夫夫声"
+                            },
+                            {
+                                "value": "肺泡呼吸音减弱听不清",
+                                "label": "肺泡呼吸音减弱听不清"
+                            },
+                            {
+                                "value": "肺泡呼吸音消失听不到",
+                                "label": "肺泡呼吸音消失听不到"
+                            },
+                            {
+                                "value": "支气管呼吸音呵呵声",
+                                "label": "支气管呼吸音呵呵声"
+                            },
+                            {
+                                "value": "混合型呼吸音夫呵声",
+                                "label": "混合型呼吸音夫呵声"
+                            },
+                            {
+                                "value": "干罗音哨声笛声",
+                                "label": "干罗音哨声笛声"
+                            },
+                            {
+                                "value": "湿罗音漱口声",
+                                "label": "湿罗音漱口声"
+                            },
+                            {
+                                "value": "捻发声",
+                                "label": "捻发声"
+                            },
+                            {
+                                "value": "空翁声",
+                                "label": "空翁声"
+                            },
+                            {
+                                "value": "摩擦声",
+                                "label": "摩擦声"
+                            },
+                            {
+                                "value": "拍水声",
+                                "label": "拍水声"
+                            },
+                            {
+                                "value": "正常",
+                                "label": "正常"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "text",
+                        "name": "其他备注"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "title": "第4页",
+        "cards": [
+            {
+                "name": "进食",
+                "problems": [
+                    {
+                        "type": "singleChoice",
+                        "name": "食欲",
+                        "options": [
+                            {
+                                "value": "减弱",
+                                "label": "减弱"
+                            },
+                            {
+                                "value": "亢进",
+                                "label": "亢进"
+                            },
+                            {
+                                "value": "废绝",
+                                "label": "废绝"
+                            },
+                            {
+                                "value": "正常",
+                                "label": "正常"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "singleChoice",
+                        "name": "异常进食",
+                        "options": [
+                            {
+                                "value": "吃土",
+                                "label": "吃土"
+                            },
+                            {
+                                "value": "食仔",
+                                "label": "食仔"
+                            },
+                            {
+                                "value": "啄羽",
+                                "label": "啄羽"
+                            },
+                            {
+                                "value": "啄肛",
+                                "label": "啄肛"
+                            },
+                            {
+                                "value": "自咬",
+                                "label": "自咬"
+                            },
+                            {
+                                "value": "吞咽空气",
+                                "label": "吞咽空气"
+                            },
+                            {
+                                "value": "无",
+                                "label": "无"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "multipleChoice",
+                        "name": "采食",
+                        "options": [
+                            {
+                                "value": "舌唇不正常",
+                                "label": "舌唇不正常"
+                            },
+                            {
+                                "value": "吞咽困难",
+                                "label": "吞咽困难"
+                            },
+                            {
+                                "value": "反刍异常",
+                                "label": "反刍异常"
+                            },
+                            {
+                                "value": "呕吐",
+                                "label": "呕吐"
+                            },
+                            {
+                                "value": "正常",
+                                "label": "正常"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "消化",
+                "problems": [
+                    {
+                        "type": "multipleChoice",
+                        "name": "呕吐",
+                        "options": [
+                            {
+                                "value": "单次呕吐",
+                                "label": "单次呕吐"
+                            },
+                            {
+                                "value": "频繁呕吐",
+                                "label": "频繁呕吐"
+                            },
+                            {
+                                "value": "红色",
+                                "label": "红色"
+                            },
+                            {
+                                "value": "黄绿色",
+                                "label": "黄绿色"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "singleChoice",
+                        "name": "唾液",
+                        "options": [
+                            {
+                                "value": "增加",
+                                "label": "增加"
+                            },
+                            {
+                                "value": "减少",
+                                "label": "减少"
+                            },
+                            {
+                                "value": "消失",
+                                "label": "消失"
+                            },
+                            {
+                                "value": "正常",
+                                "label": "正常"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "singleChoice",
+                        "name": "肠道听诊",
+                        "options": [
+                            {
+                                "value": "增强",
+                                "label": "增强"
+                            },
+                            {
+                                "value": "减弱",
+                                "label": "减弱"
+                            },
+                            {
+                                "value": "消失",
+                                "label": "消失"
+                            },
+                            {
+                                "value": "不整",
+                                "label": "不整"
+                            },
+                            {
+                                "value": "金属性肠音",
+                                "label": "金属性肠音"
+                            },
+                            {
+                                "value": "正常",
+                                "label": "正常"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "multipleChoice",
+                        "name": "腹部触诊",
+                        "options": [
+                            {
+                                "value": "间歇疼痛",
+                                "label": "间歇疼痛"
+                            },
+                            {
+                                "value": "持续疼痛",
+                                "label": "持续疼痛"
+                            },
+                            {
+                                "value": "疼痛剧烈",
+                                "label": "疼痛剧烈"
+                            },
+                            {
+                                "value": "疼痛轻微",
+                                "label": "疼痛轻微"
+                            },
+                            {
+                                "value": "正常",
+                                "label": "正常"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "粪便",
+                "problems": [
+                    {
+                        "type": "text",
+                        "name": "粪便颜色"
+                    },
+                    {
+                        "type": "text",
+                        "name": "排便次数"
+                    },
+                    {
+                        "type": "text",
+                        "name": "粪量多少"
+                    }
+                ]
+            },
+            {
+                "name": "排尿",
+                "problems": [
+                    {
+                        "type": "singleChoice",
+                        "name": "尿量",
+                        "options": [
+                            {
+                                "value": "正常",
+                                "label": "正常"
+                            },
+                            {
+                                "value": "少尿",
+                                "label": "少尿"
+                            },
+                            {
+                                "value": "多尿",
+                                "label": "多尿"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "singleChoice",
+                        "name": "排尿难易",
+                        "options": [
+                            {
+                                "value": "正常",
+                                "label": "正常"
+                            },
+                            {
+                                "value": "易排",
+                                "label": "易排"
+                            },
+                            {
+                                "value": "难排",
+                                "label": "难排"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "text",
+                        "name": "排尿颜色"
+                    },
+                    {
+                        "type": "singleChoice",
+                        "name": "排尿气味",
+                        "options": [
+                            {
+                                "value": "正常",
+                                "label": "正常"
+                            },
+                            {
+                                "value": "臭味",
+                                "label": "臭味"
+                            },
+                            {
+                                "value": "烂苹果味",
+                                "label": "烂苹果味"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "其他备注",
+                "problems": [
+                    {
+                        "type": "text",
+                        "name": "备注"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "第5页",
+        "cards": [
+            {
+                "name": "其他化验结果",
+                "problems": [
+                    {
+                        "type": "text",
+                        "name": "血常规结果"
+                    },
+                    {
+                        "type": "text",
+                        "name": "X光结果"
+                    },
+                    {
+                        "type": "text",
+                        "name": "CT结果"
+                    },
+                    {
+                        "type": "text",
+                        "name": "B超结果"
+                    },
+                    {
+                        "type": "text",
+                        "name": "核磁共振结果"
+                    }
+                ]
+            }
+        ]
+    }
+]
