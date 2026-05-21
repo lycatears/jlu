@@ -1,0 +1,33 @@
+﻿<Window x:Class="WpfApp1.ConfigWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="题库配置" Height="280" Width="400">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="51*"/>
+            <ColumnDefinition Width="149*"/>
+        </Grid.ColumnDefinitions>
+        <Label Content="请求URL" HorizontalAlignment="Center" VerticalAlignment="Top" Height="26" Width="102" Margin="0,10,0,0"/>
+        <Label Content="API Key" HorizontalAlignment="Center" VerticalAlignment="Top" Height="26" Width="102" Margin="0,41,0,0"/>
+        <Label Content="模型名称" HorizontalAlignment="Center" VerticalAlignment="Top" Height="26" Width="102" Margin="0,71,0,0"/>
+        <Label Content="系统 Prompt" HorizontalAlignment="Center" VerticalAlignment="Top" Height="26" Width="102" Margin="0,101,0,0"/>
+        <Label Content="用户 Prompt" HorizontalAlignment="Center" VerticalAlignment="Top" Height="26" Width="102" Margin="0,130,0,0"/>
+        <TextBox x:Name="URLTextBox" Grid.Column="1" HorizontalAlignment="Center" Margin="0,9,0,0" Text="" VerticalAlignment="Top" Width="262" RenderTransformOrigin="0.5,0.5" Height="25" VerticalContentAlignment="Center"/>
+        <TextBox x:Name="APIKeyTextBox" Grid.Column="1" HorizontalAlignment="Center" Margin="0,40,0,0" TextWrapping="NoWrap" Text="" VerticalAlignment="Top" Width="262" RenderTransformOrigin="0.5,0.5" Height="25" VerticalContentAlignment="Center">
+
+        </TextBox>
+        <TextBox x:Name="AIModelNameTextBox" Grid.Column="1" HorizontalAlignment="Center" Margin="0,71,0,0" TextWrapping="NoWrap" Text="" VerticalAlignment="Top" Width="262" RenderTransformOrigin="0.5,0.5" Height="25" VerticalContentAlignment="Center">
+
+        </TextBox>
+        <TextBox x:Name="SystemPromptTextBox" Grid.Column="1" HorizontalAlignment="Center" Margin="0,101,0,0" TextWrapping="NoWrap" Text="" VerticalAlignment="Top" Width="262" RenderTransformOrigin="0.5,0.5" Height="25" VerticalContentAlignment="Center"/>
+        <TextBox x:Name="UserPromptTextBox" Grid.Column="1" HorizontalAlignment="Center" Margin="0,131,0,0" TextWrapping="NoWrap" Text="" VerticalAlignment="Top" Width="262" RenderTransformOrigin="0.5,0.5" Height="25" VerticalContentAlignment="Center"/>
+        <Button Content="确定修改" HorizontalAlignment="Center" Margin="0,208,0,0" VerticalAlignment="Top" Height="27" Grid.ColumnSpan="2" Width="364" Click="Button_Click"/>
+        <Label Content="本地题库" HorizontalAlignment="Center" VerticalAlignment="Top" Height="26" Width="102" Margin="0,161,0,0"/>
+        <TextBox x:Name="LocalLibraryTextBox" Grid.Column="1" HorizontalAlignment="Center" Margin="0,161,0,0" TextWrapping="NoWrap" Text="" VerticalAlignment="Top" Width="262" RenderTransformOrigin="0.5,0.5" Height="25" VerticalContentAlignment="Center"/>
+
+    </Grid>
+</Window>

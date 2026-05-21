@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>抽题页面</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script>
+        MathJax = {
+            tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <link rel="stylesheet" href="problemShow.css">
+</head>
+
+<body>
+    <div id="problem-id-subject">
+        <div id="problem-id-box">
+            题目编号#<span id="problem-id">114514</span>
+        </div>
+        <div id="problem-subject-box">
+            科目 <span id="subject-name">数据结构</span>
+        </div>
+    </div>
+    <div id="problem-content">
+        请在114.514秒内手写红黑树实现代码。<br>
+        给出一种时间复杂度为$O(\dfrac{1}{n})$的排序算法。
+    </div>
+    <div id="problem-key">
+        88888888
+    </div>
+
+    <script>
+        // initialize the library
+        function initProblems(problemLibraryJSONString) {
+            localStorage.setItem("problemLibrary", JSON.stringify(problemLibraryJSONString))
+            problems = JSON.parse(problemLibraryJSONString)
+        }
+
+        function setProblem(problemID) {
+            let probID = problems[problemID].problemID
+            let subjectName = problems[problemID].subjectName
+            let problemContent = problems[problemID].problemContent
+            let problemKey = problems[problemID].problemKey
+
+            const subNameBox = document.getElementById("subject-name")
+            const probIDBox = document.getElementById("problem-id")
+            const probContentBox = document.getElementById("problem-content")
+            const probKeyBox = document.getElementById("problem-key")
+
+            subNameBox.innerHTML = subjectName
+            probIDBox.innerHTML = probID
+            probContentBox.innerHTML = problemContent
+            probKeyBox.innerHTML = problemKey
+            probKeyBox.style.display = "none"
+            // re-render the page to display formulas
+            MathJax.typeset()
+            finishedProblems.push(problems.splice(problemID, 1))
+        }
+
+        function randomProblem() {
+            let countOfProblems = problems.length
+            if (countOfProblems === 0) {
+                alert("题库已抽取完毕！")
+                return
+            }
+            let randomID = Math.floor(Math.random() * countOfProblems)
+            setProblem(randomID)
+        }
+
+        function showKey() {
+            document.getElementById("problem-key").style.display = "block"
+        }
+
+        // Load the problems
+        let problems = []
+        let finishedProblems = []
+        if (!localStorage.getItem('problemLibrary')) {
+            fetch('./problemLibrary.json')
+                .then((response) => response.json())
+                .then(data => {
+                    localStorage.setItem("problemLibrary", JSON.stringify(data))
+                })
+        }
+
+        problems = JSON.parse(localStorage.getItem('problemLibrary'))
+        randomProblem()
+
+
+    </script>
+</body>
+
+</html>

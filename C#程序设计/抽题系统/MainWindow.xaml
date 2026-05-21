@@ -1,0 +1,65 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        xmlns:Wpf="clr-namespace:Microsoft.Web.WebView2.Wpf;assembly=Microsoft.Web.WebView2.Wpf" x:Class="WpfApp1.MainWindow"
+        mc:Ignorable="d"
+        Title="面试系统" Height="616" Width="815">
+    <Window.Resources>
+        <local:QuestionSubstringConverter x:Key="QuestionSubstringConverter" MaxLength="30"/>
+    </Window.Resources>
+    <Grid>
+        <DockPanel>
+            <Menu DockPanel.Dock="Top" Margin="0,0,0,0" Height="30" VerticalContentAlignment="Top" Grid.ColumnSpan="2">
+                <MenuItem Header="面试" Click="MenuItem_Click" Height="30" Width="60">
+                    <MenuItem Header="上一题" Click="PREVButton_Click"/>
+                    <MenuItem Header="下一题" Click="NEXTButton_Click"/>
+                    <MenuItem Header="使用AI生成下一题" Click="AIQuestionButton_Click"/>
+                    <MenuItem Header="给出答案解析" Click="ShowKeyButton_Click"/>
+                    <Separator/>
+                    <MenuItem Header="重新开始面试" Click="RefreshButton_Click"/>
+                    <MenuItem Header="更换当前题目" Click="SwitchButton_Click"/>
+                    <MenuItem Header="立即结束当前考生面试" Click="RefreshButton_Click"/>
+                    <Separator/>
+                    <MenuItem Header="退出面试系统" Click="Exit_System"/>
+                </MenuItem>
+                <MenuItem Header="选项" Width="60" Click="MenuItem_Click_1">
+                    <MenuItem Header="题库配置..." Click="ProblemLibraryConfig"/>
+                </MenuItem>
+                <MenuItem Header="关于" Width="60">
+                    <MenuItem Header="关于本面试系统..." Click="about"/>
+                </MenuItem>
+            </Menu>
+            <StackPanel DockPanel.Dock="Left" Width="100" MinHeight="220" MinWidth="166" Height="560">
+                <GroupBox Header="当前考生已作答" Width="166" Height="561">
+                    <StackPanel HorizontalAlignment="Left" Width="170" Height="543">
+                        <ListBox x:Name="FinishedList" SelectionChanged="ListBox_SelectionChanged" BorderThickness="0,0,0,0" HorizontalAlignment="Left" Width="150" MinWidth="150" MinHeight="220" MaxHeight="500" Height="540">
+                            <ListBox.ItemTemplate>
+                                <DataTemplate>
+                                    <TextBlock Text="{Binding Path=., Converter={StaticResource QuestionSubstringConverter}}"/>
+                                </DataTemplate>
+                            </ListBox.ItemTemplate>
+                        </ListBox>
+                    </StackPanel>
+                </GroupBox>
+            </StackPanel>
+            <StackPanel DockPanel.Dock="Right" Margin="0,0,10,0" HorizontalAlignment="Right">
+                <Button Content="开始" Click="StartButton_Click" Width="80" Margin="0,30,0,0"/>
+                <Button Content="上一题" Click="PREVButton_Click" Margin="0,10,0,0" Width="80"/>
+                <Button Content="下一题" Click="NEXTButton_Click" Margin="0,10,0,0" Width="80"/>
+                <Button Content="AI出题" Click="AIQuestionButton_Click" Margin="0,10,0,0" Width="80"/>
+                <Button Content="答案解析" Click="ShowKeyButton_Click" Margin="0,10,0,0" Width="80"/>
+                <Button Content="重新开始" Click="RefreshButton_Click" Width="80" VerticalAlignment="Bottom" Margin="0,170,0,0"/>
+                <Button Content="换题" Click="SwitchButton_Click" Margin="0,10,0,0" Width="80" VerticalAlignment="Bottom"/>
+                <Button Content="结束当前" Click="RefreshButton_Click" Margin="0,10,0,0" Width="80" Height="45" VerticalAlignment="Bottom"/>
+            </StackPanel>
+            <TextBlock DockPanel.Dock="Top" HorizontalAlignment="Left" Margin="10,10,10,10" TextWrapping="Wrap" VerticalAlignment="Top" Height="36" Width="512" FontSize="16"><Run Text="欢迎同学"/><Run Language="zh-cn" Text="参加本次考试"/><Run Text="！请您回答："/></TextBlock>
+            <Wpf:WebView2 x:Name="webView" Margin="10,10,10,10" MinWidth="512" MinHeight="288" Source="file://ProblemShow/problemShow.html"/>
+        </DockPanel>
+
+
+
+    </Grid>
+</Window>

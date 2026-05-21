@@ -1,0 +1,61 @@
+* {
+    margin: 0;
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+#problem-id-subject {
+    margin: 5px;
+    padding: 5px;
+    box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+}
+
+#problem-id-box {
+    display: inline-block;
+}
+
+#problem-subject-box {
+    margin-left: 30px;
+    display: inline-block;
+}
+
+#problem-id {
+    background-color: #66ccff;
+    border-radius: 5px;
+    color: white;
+}
+
+#subject-name {
+    background-color: #ff99cc;
+    border-radius: 5px;
+    color: white;
+}
+
+#problem-content{
+    margin: 15px;
+    padding: 5px;
+    box-sizing: border-box;
+    background-color: rgb(202, 242, 255);
+    border-left: 3px solid #66ccff;
+    border-radius: 5px;
+}
+
+span{
+    display: inline-block;
+    text-align: center;
+    min-width: 2em;
+}
+
+#problem-key {
+    display: block;
+    margin: 15px;
+    padding: 5px;
+    box-sizing: border-box;
+    background-color: rgb(215, 255, 202);
+    border-left: 3px solid #66ff99;
+    border-radius: 5px;
+}
