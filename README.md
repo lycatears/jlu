@@ -5,6 +5,9 @@
 > 其他jlu相关仓库不再更新，后续相关信息全部汇总到本仓库，敬请知悉。
 > 
 > 如有相关问题，欢迎提出issue，或者联系本人邮箱：lycatears@outlook.com
+>
+**一定要看readme！！！**
+
 <img width="209" height="209" alt="logo" src="https://github.com/user-attachments/assets/9fc73afc-2522-46a6-962d-880ca3173dca" />
 
 ## 写在前面
