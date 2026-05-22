@@ -1,0 +1,14 @@
+{传说中的注释}
+program p
+type t = integer;
+    var t v1;
+    char v2,v114514;
+begin
+    read(v1);
+    v1 := v1 + 10;
+    v114514 := 7;
+    {write('a')}
+    write(v1)
+end.
+
+

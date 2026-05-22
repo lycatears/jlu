@@ -1,0 +1,286 @@
+Program
+|__ProgramHead
+|  |__program
+|  |__ProgramName
+|     |__sd
+|__DeclarePart
+|  |__TypeDecpart
+|  |  |__blank
+|  |__VarDecpart
+|  |  |__VarDec
+|  |     |__var
+|  |     |__VarDecList
+|  |        |__TypeDef
+|  |        |  |__BaseType
+|  |        |     |__integer
+|  |        |__VarIdList
+|  |        |  |__s
+|  |        |  |__VarIdMore
+|  |        |     |__blank
+|  |        |__;
+|  |        |__VarDecMore
+|  |           |__VarDecList
+|  |              |__TypeDef
+|  |              |  |__BaseType
+|  |              |     |__integer
+|  |              |__VarIdList
+|  |              |  |__t
+|  |              |  |__VarIdMore
+|  |              |     |__blank
+|  |              |__;
+|  |              |__VarDecMore
+|  |                 |__blank
+|  |__ProcDecpart
+|     |__ProcDec
+|        |__procedure
+|        |__ProcName
+|        |  |__factor
+|        |__(
+|        |__ParamList
+|        |  |__ParamDecList
+|        |     |__Param
+|        |     |  |__TypeDef
+|        |     |  |  |__BaseType
+|        |     |  |     |__integer
+|        |     |  |__FormList
+|        |     |     |__n
+|        |     |     |__FidMore
+|        |     |        |__blank
+|        |     |__ParamMore
+|        |        |__;
+|        |        |__ParamDecList
+|        |           |__Param
+|        |           |  |__var
+|        |           |  |__TypeDef
+|        |           |  |  |__BaseType
+|        |           |  |     |__integer
+|        |           |  |__FormList
+|        |           |     |__m
+|        |           |     |__FidMore
+|        |           |        |__blank
+|        |           |__ParamMore
+|        |              |__blank
+|        |__)
+|        |__;
+|        |__ProcDecPart
+|        |  |__DeclarePart
+|        |     |__TypeDecpart
+|        |     |  |__blank
+|        |     |__VarDecpart
+|        |     |  |__VarDec
+|        |     |     |__var
+|        |     |     |__VarDecList
+|        |     |        |__TypeDef
+|        |     |        |  |__BaseType
+|        |     |        |     |__integer
+|        |     |        |__VarIdList
+|        |     |        |  |__w
+|        |     |        |  |__VarIdMore
+|        |     |        |     |__blank
+|        |     |        |__;
+|        |     |        |__VarDecMore
+|        |     |           |__blank
+|        |     |__ProcDecpart
+|        |        |__blank
+|        |__ProcBody
+|        |  |__ProgramBody
+|        |     |__begin
+|        |     |__StmList
+|        |     |  |__Stm
+|        |     |  |  |__ConditionalStm
+|        |     |  |     |__if
+|        |     |  |     |__RelExp
+|        |     |  |     |  |__Exp
+|        |     |  |     |  |  |__Term
+|        |     |  |     |  |  |  |__Factor
+|        |     |  |     |  |  |  |  |__Variable
+|        |     |  |     |  |  |  |     |__n
+|        |     |  |     |  |  |  |     |__VariMore
+|        |     |  |     |  |  |  |        |__blank
+|        |     |  |     |  |  |  |__OtherFactor
+|        |     |  |     |  |  |     |__blank
+|        |     |  |     |  |  |__OtherTerm
+|        |     |  |     |  |     |__blank
+|        |     |  |     |  |__OtherRelE
+|        |     |  |     |     |__CmpOp
+|        |     |  |     |     |  |__=
+|        |     |  |     |     |__Exp
+|        |     |  |     |        |__Term
+|        |     |  |     |        |  |__Factor
+|        |     |  |     |        |  |  |__0
+|        |     |  |     |        |  |__OtherFactor
+|        |     |  |     |        |     |__blank
+|        |     |  |     |        |__OtherTerm
+|        |     |  |     |           |__blank
+|        |     |  |     |__then
+|        |     |  |     |__StmList
+|        |     |  |     |  |__Stm
+|        |     |  |     |  |  |__m
+|        |     |  |     |  |  |__AssCall
+|        |     |  |     |  |     |__AssignmentRest
+|        |     |  |     |  |        |__VariMore
+|        |     |  |     |  |        |  |__blank
+|        |     |  |     |  |        |__:=
+|        |     |  |     |  |        |__Exp
+|        |     |  |     |  |           |__Term
+|        |     |  |     |  |           |  |__Factor
+|        |     |  |     |  |           |  |  |__1
+|        |     |  |     |  |           |  |__OtherFactor
+|        |     |  |     |  |           |     |__blank
+|        |     |  |     |  |           |__OtherTerm
+|        |     |  |     |  |              |__blank
+|        |     |  |     |  |__StmMore
+|        |     |  |     |     |__blank
+|        |     |  |     |__else
+|        |     |  |     |__StmList
+|        |     |  |     |  |__Stm
+|        |     |  |     |  |  |__factor
+|        |     |  |     |  |  |__AssCall
+|        |     |  |     |  |     |__CallStmRest
+|        |     |  |     |  |        |__(
+|        |     |  |     |  |        |__ActParamList
+|        |     |  |     |  |        |  |__Exp
+|        |     |  |     |  |        |  |  |__Term
+|        |     |  |     |  |        |  |  |  |__Factor
+|        |     |  |     |  |        |  |  |  |  |__Variable
+|        |     |  |     |  |        |  |  |  |     |__n
+|        |     |  |     |  |        |  |  |  |     |__VariMore
+|        |     |  |     |  |        |  |  |  |        |__blank
+|        |     |  |     |  |        |  |  |  |__OtherFactor
+|        |     |  |     |  |        |  |  |     |__blank
+|        |     |  |     |  |        |  |  |__OtherTerm
+|        |     |  |     |  |        |  |     |__AddOp
+|        |     |  |     |  |        |  |     |  |__-
+|        |     |  |     |  |        |  |     |__Exp
+|        |     |  |     |  |        |  |        |__Term
+|        |     |  |     |  |        |  |        |  |__Factor
+|        |     |  |     |  |        |  |        |  |  |__1
+|        |     |  |     |  |        |  |        |  |__OtherFactor
+|        |     |  |     |  |        |  |        |     |__blank
+|        |     |  |     |  |        |  |        |__OtherTerm
+|        |     |  |     |  |        |  |           |__blank
+|        |     |  |     |  |        |  |__ActParamMore
+|        |     |  |     |  |        |     |__,
+|        |     |  |     |  |        |     |__ActParamList
+|        |     |  |     |  |        |        |__Exp
+|        |     |  |     |  |        |        |  |__Term
+|        |     |  |     |  |        |        |  |  |__Factor
+|        |     |  |     |  |        |        |  |  |  |__Variable
+|        |     |  |     |  |        |        |  |  |     |__w
+|        |     |  |     |  |        |        |  |  |     |__VariMore
+|        |     |  |     |  |        |        |  |  |        |__blank
+|        |     |  |     |  |        |        |  |  |__OtherFactor
+|        |     |  |     |  |        |        |  |     |__blank
+|        |     |  |     |  |        |        |  |__OtherTerm
+|        |     |  |     |  |        |        |     |__blank
+|        |     |  |     |  |        |        |__ActParamMore
+|        |     |  |     |  |        |           |__blank
+|        |     |  |     |  |        |__)
+|        |     |  |     |  |__StmMore
+|        |     |  |     |     |__;
+|        |     |  |     |     |__StmList
+|        |     |  |     |        |__Stm
+|        |     |  |     |        |  |__m
+|        |     |  |     |        |  |__AssCall
+|        |     |  |     |        |     |__AssignmentRest
+|        |     |  |     |        |        |__VariMore
+|        |     |  |     |        |        |  |__blank
+|        |     |  |     |        |        |__:=
+|        |     |  |     |        |        |__Exp
+|        |     |  |     |        |           |__Term
+|        |     |  |     |        |           |  |__Factor
+|        |     |  |     |        |           |  |  |__Variable
+|        |     |  |     |        |           |  |     |__n
+|        |     |  |     |        |           |  |     |__VariMore
+|        |     |  |     |        |           |  |        |__blank
+|        |     |  |     |        |           |  |__OtherFactor
+|        |     |  |     |        |           |     |__MultOp
+|        |     |  |     |        |           |     |  |__*
+|        |     |  |     |        |           |     |__Term
+|        |     |  |     |        |           |        |__Factor
+|        |     |  |     |        |           |        |  |__Variable
+|        |     |  |     |        |           |        |     |__w
+|        |     |  |     |        |           |        |     |__VariMore
+|        |     |  |     |        |           |        |        |__blank
+|        |     |  |     |        |           |        |__OtherFactor
+|        |     |  |     |        |           |           |__blank
+|        |     |  |     |        |           |__OtherTerm
+|        |     |  |     |        |              |__blank
+|        |     |  |     |        |__StmMore
+|        |     |  |     |           |__blank
+|        |     |  |     |__fi
+|        |     |  |__StmMore
+|        |     |     |__blank
+|        |     |__end
+|        |__ProcDecMore
+|           |__blank
+|__ProgramBody
+|  |__begin
+|  |__StmList
+|  |  |__Stm
+|  |  |  |__InputStm
+|  |  |     |__read
+|  |  |     |__(
+|  |  |     |__Invar
+|  |  |     |  |__s
+|  |  |     |__)
+|  |  |__StmMore
+|  |     |__;
+|  |     |__StmList
+|  |        |__Stm
+|  |        |  |__factor
+|  |        |  |__AssCall
+|  |        |     |__CallStmRest
+|  |        |        |__(
+|  |        |        |__ActParamList
+|  |        |        |  |__Exp
+|  |        |        |  |  |__Term
+|  |        |        |  |  |  |__Factor
+|  |        |        |  |  |  |  |__Variable
+|  |        |        |  |  |  |     |__s
+|  |        |        |  |  |  |     |__VariMore
+|  |        |        |  |  |  |        |__blank
+|  |        |        |  |  |  |__OtherFactor
+|  |        |        |  |  |     |__blank
+|  |        |        |  |  |__OtherTerm
+|  |        |        |  |     |__blank
+|  |        |        |  |__ActParamMore
+|  |        |        |     |__,
+|  |        |        |     |__ActParamList
+|  |        |        |        |__Exp
+|  |        |        |        |  |__Term
+|  |        |        |        |  |  |__Factor
+|  |        |        |        |  |  |  |__Variable
+|  |        |        |        |  |  |     |__t
+|  |        |        |        |  |  |     |__VariMore
+|  |        |        |        |  |  |        |__blank
+|  |        |        |        |  |  |__OtherFactor
+|  |        |        |        |  |     |__blank
+|  |        |        |        |  |__OtherTerm
+|  |        |        |        |     |__blank
+|  |        |        |        |__ActParamMore
+|  |        |        |           |__blank
+|  |        |        |__)
+|  |        |__StmMore
+|  |           |__;
+|  |           |__StmList
+|  |              |__Stm
+|  |              |  |__OutputStm
+|  |              |     |__write
+|  |              |     |__(
+|  |              |     |__Exp
+|  |              |     |  |__Term
+|  |              |     |  |  |__Factor
+|  |              |     |  |  |  |__Variable
+|  |              |     |  |  |     |__t
+|  |              |     |  |  |     |__VariMore
+|  |              |     |  |  |        |__blank
+|  |              |     |  |  |__OtherFactor
+|  |              |     |  |     |__blank
+|  |              |     |  |__OtherTerm
+|  |              |     |     |__blank
+|  |              |     |__)
+|  |              |__StmMore
+|  |                 |__blank
+|  |__end
+|__.
