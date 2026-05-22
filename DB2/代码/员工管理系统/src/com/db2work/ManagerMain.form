@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="com.db2work.ManagerMain">
+  <grid id="27dc6" binding="EmployeeManageMain" layout-manager="GridLayoutManager" row-count="5" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+    <margin top="5" left="5" bottom="5" right="5"/>
+    <constraints>
+      <xy x="20" y="20" width="1277" height="403"/>
+    </constraints>
+    <properties/>
+    <border type="none"/>
+    <children>
+      <component id="dc33e" class="javax.swing.JLabel" binding="EmployeeManageMainLabel">
+        <constraints>
+          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="4" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <font name="Microsoft YaHei Light" size="24"/>
+          <text value="员工信息管理系统"/>
+        </properties>
+      </component>
+      <scrollpane id="1382" binding="TemplPanel">
+        <constraints>
+          <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <font size="14"/>
+          <verticalScrollBarPolicy value="22"/>
+        </properties>
+        <border type="none" title="现有员工信息"/>
+        <children>
+          <component id="8d0b4" class="javax.swing.JTable" binding="TemplTable">
+            <constraints/>
+            <properties>
+              <autoCreateRowSorter value="true"/>
+              <autoResizeMode value="0"/>
+              <enabled value="false"/>
+              <fillsViewportHeight value="false"/>
+              <font size="14"/>
+            </properties>
+          </component>
+        </children>
+      </scrollpane>
+      <toolbar id="40ce7">
+        <constraints>
+          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="-1" height="20"/>
+          </grid>
+        </constraints>
+        <properties>
+          <borderPainted value="true"/>
+          <floatable value="false"/>
+          <font size="12"/>
+          <rollover value="false"/>
+        </properties>
+        <clientProperties>
+          <JToolBar.isRollover class="java.lang.Boolean" value="false"/>
+        </clientProperties>
+        <border type="empty"/>
+        <children>
+          <component id="ca744" class="javax.swing.JLabel" binding="EmployeeCountTextLabel">
+            <constraints/>
+            <properties>
+              <text value="已有员工计数："/>
+            </properties>
+          </component>
+          <component id="21699" class="javax.swing.JLabel" binding="EmployeeCount">
+            <constraints/>
+            <properties>
+              <text value="0"/>
+            </properties>
+          </component>
+          <component id="409bb" class="javax.swing.JToolBar$Separator">
+            <constraints/>
+            <properties/>
+          </component>
+          <component id="57234" class="javax.swing.JButton" binding="RefreshButton">
+            <constraints/>
+            <properties>
+              <font size="14"/>
+              <icon value="refresh.png"/>
+              <text value="刷新"/>
+            </properties>
+          </component>
+          <component id="4b34a" class="javax.swing.JToolBar$Separator">
+            <constraints/>
+            <properties/>
+          </component>
+          <component id="bb18c" class="javax.swing.JButton" binding="SingleInsertButton">
+            <constraints/>
+            <properties>
+              <font size="14"/>
+              <icon value="singleInsert.png"/>
+              <text value="单行插入"/>
+              <toolTipText value="手动输入员工信息。"/>
+            </properties>
+          </component>
+          <component id="1c21f" class="javax.swing.JToolBar$Separator">
+            <constraints/>
+            <properties/>
+          </component>
+          <component id="a6662" class="javax.swing.JButton" binding="MultipleInsertButton">
+            <constraints/>
+            <properties>
+              <enabled value="true"/>
+              <font size="14"/>
+              <icon value="multipleInsert.png"/>
+              <text value="多行插入"/>
+              <toolTipText value="从Excel表格文件中批量导入文件，或者一次插入多行。"/>
+            </properties>
+          </component>
+          <component id="1e237" class="javax.swing.JToolBar$Separator">
+            <constraints/>
+            <properties/>
+          </component>
+          <component id="cee36" class="javax.swing.JButton" binding="SubQueryButton">
+            <constraints/>
+            <properties>
+              <enabled value="true"/>
+              <font size="14"/>
+              <icon value="subqueryInsert.png"/>
+              <text value="通过子查询插入"/>
+              <toolTipText value="从其他表中导入员工数据。"/>
+            </properties>
+          </component>
+          <component id="6083c" class="javax.swing.JToolBar$Separator">
+            <constraints/>
+            <properties/>
+          </component>
+          <component id="974b2" class="javax.swing.JButton" binding="ExportButton">
+            <constraints/>
+            <properties>
+              <enabled value="true"/>
+              <font size="14"/>
+              <icon value="exportToExcel.png"/>
+              <text value="导出员工信息表"/>
+            </properties>
+          </component>
+          <component id="ead78" class="javax.swing.JToolBar$Separator">
+            <constraints/>
+            <properties/>
+          </component>
+          <component id="ccc25" class="javax.swing.JButton" binding="DeleteButton">
+            <constraints/>
+            <properties>
+              <enabled value="true"/>
+              <font size="14"/>
+              <icon value="NO.png"/>
+              <text value="删除员工"/>
+              <toolTipText value="删除员工数据。"/>
+            </properties>
+          </component>
+          <component id="479b7" class="javax.swing.JToolBar$Separator">
+            <constraints/>
+            <properties/>
+          </component>
+          <component id="2aaba" class="javax.swing.JButton" binding="EditButton">
+            <constraints/>
+            <properties>
+              <enabled value="true"/>
+              <font size="14"/>
+              <icon value="edit.png"/>
+              <text value="编辑员工信息"/>
+              <toolTipText value="编辑员工数据。"/>
+            </properties>
+          </component>
+        </children>
+      </toolbar>
+      <grid id="2987a" layout-manager="GridLayoutManager" row-count="1" column-count="3" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+        <margin top="0" left="0" bottom="0" right="0"/>
+        <constraints>
+          <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties/>
+        <border type="none"/>
+        <children>
+          <component id="88dd1" class="javax.swing.JLabel" binding="SearchLabel">
+            <constraints>
+              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <labelFor value="56d58"/>
+              <text value="搜索："/>
+            </properties>
+          </component>
+          <component id="def24" class="javax.swing.JTextField" binding="Keyword">
+            <constraints>
+              <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                <preferred-size width="150" height="-1"/>
+              </grid>
+            </constraints>
+            <properties/>
+          </component>
+          <component id="b025f" class="javax.swing.JButton" binding="MainSearchButton">
+            <constraints>
+              <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text value="确定"/>
+            </properties>
+          </component>
+        </children>
+      </grid>
+      <toolbar id="b3af3">
+        <constraints>
+          <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="-1" height="20"/>
+          </grid>
+        </constraints>
+        <properties>
+          <floatable value="false"/>
+        </properties>
+        <border type="none"/>
+        <children>
+          <component id="ec30f" class="javax.swing.JButton" binding="ShowPhotoButton">
+            <constraints/>
+            <properties>
+              <font size="14"/>
+              <icon value="eyes.png"/>
+              <text value="查看员工照片"/>
+            </properties>
+          </component>
+          <component id="d0edd" class="javax.swing.JToolBar$Separator">
+            <constraints/>
+            <properties/>
+          </component>
+          <component id="4eeb6" class="javax.swing.JButton" binding="SetPhotoButton">
+            <constraints/>
+            <properties>
+              <font size="14"/>
+              <icon value="setPhoto.png"/>
+              <text value="设置员工照片"/>
+            </properties>
+          </component>
+          <component id="6db11" class="javax.swing.JToolBar$Separator">
+            <constraints/>
+            <properties/>
+          </component>
+          <component id="c8d1a" class="javax.swing.JButton" binding="ExitButton">
+            <constraints/>
+            <properties>
+              <font size="14"/>
+              <horizontalAlignment value="0"/>
+              <icon value="exit.png"/>
+              <text value="退出"/>
+            </properties>
+          </component>
+        </children>
+      </toolbar>
+    </children>
+  </grid>
+</form>
