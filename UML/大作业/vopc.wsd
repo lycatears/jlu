@@ -1,0 +1,70 @@
+@startuml 1
+actor 旅客 as 旅客
+boundary 系统通知模块
+boundary App通知模块
+boundary 短信通知模块
+boundary 错误提示模块
+control 订单管理系统
+participant 系统通知模块 as 系统通知模块
+participant App通知模块 as App通知模块
+participant 短信通知模块 as 短信通知模块
+participant 订单管理系统 as 订单管理系统
+participant 错误提示模块 as 错误提示模块
+entity 订单
+
+title 航班动态通知顺序图
+
+旅客 -> 订单管理系统: 产生订单变动信息
+activate 订单管理系统
+activate 系统通知模块
+activate App通知模块
+activate 短信通知模块
+订单管理系统 -> 订单: 查询订单信息
+activate 订单
+订单 --> 订单管理系统: 返回变动情况
+deactivate 订单
+订单管理系统 -> 系统通知模块: 发送通知
+deactivate 系统通知模块
+订单管理系统 -> App通知模块: 发送通知
+deactivate App通知模块
+订单管理系统 -> 短信通知模块: 发送通知
+deactivate 短信通知模块
+旅客 -> 订单管理系统: 选择查看变动信息
+订单管理系统 --> 旅客: 显示变动信息
+alt 查询失败
+订单管理系统 -> 错误提示模块: 生成错误提示
+错误提示模块 --> 旅客: 显示错误信息
+deactivate 订单管理系统
+end
+@enduml
+
+@startuml 2
+class 系统通知模块 {
+  +发送通知()
+}
+
+class App通知模块 {
+  +发送通知()
+}
+
+class 短信通知模块 {
+  +发送通知()
+}
+
+class 订单管理系统 {
+  -订单信息
+  +产生订单变动信息()
+  +显示变动信息()
+  +生成错误提示()
+}
+
+class 错误提示模块 {
+  +显示错误信息()
+}
+
+旅客 --> 订单管理系统: 接收通知
+订单管理系统 --> 系统通知模块: 发送通知
+订单管理系统 --> App通知模块: 发送通知
+订单管理系统 --> 短信通知模块: 发送通知
+订单管理系统 --> 错误提示模块: 生成错误提示
+@enduml

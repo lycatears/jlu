@@ -1,0 +1,45 @@
+@startuml 123
+actor Passenger
+boundary payment
+control Flight
+entity TicketData
+participant "旅客" as Passenger
+participant "支付界面" as payment
+
+payment -> payment: 系统成功创建订单
+payment -> Passenger: 订单生成并被用户确认，系统跳转到支付页面
+payment -> Passenger: 显示航班信息，包含航班详情、乘客信息和附加服务选项
+payment -> Passenger: 显示费用信息，单独列出额外服务产生的费用
+Passenger --> payment: 确认航班详情
+Passenger --> payment: 选择支付方式
+Passenger --> payment: 支付资金
+
+alt 支付成功
+    payment -> payment: 完成订单，生成机票
+    payment -> payment: 发送电子票据至旅客邮箱或App通知
+    payment -> Passenger: 支付成功，订单完成，已发送电子票据
+else 支付失败
+    payment -> Passenger: 提示支付失败原因
+    Passenger --> payment: 选择其他支付方式
+    Passenger --> payment: 重新支付资金
+    payment -> payment: 完成订单，生成机票
+    payment -> payment: 发送电子票据至旅客邮箱或App通知
+    payment --> Passenger: 支付成功，订单完成，已发送电子票据
+end
+
+activate payment
+payment -> payment: 订单完成支付，发送电子票据
+
+
+opt 发送信息失败
+    loop 重试发送
+        payment -> payment: 尝试重新发送电子票据
+        alt 发送成功
+            payment -> Passenger: 发送电子票据成功
+            break
+        end
+    end
+end
+deactivate payment
+
+@enduml

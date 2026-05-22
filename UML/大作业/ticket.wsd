@@ -1,0 +1,60 @@
+@startuml
+actor 乘客
+boundary 支付界面
+control 订单管理
+entity 订单
+entity 机票
+entity 电子票据
+participant "旅客" as 乘客
+participant "支付页面" as 支付界面 <<Boundary>>
+participant "订单控制器" as 订单管理 <<Control>>
+participant "订单" as 订单 <<Entity>>
+participant "机票" as 机票 <<Entity>>
+participant "电子票据" as 电子票据 <<Entity>>
+title 支付顺序图
+
+
+乘客 -> 支付界面: 确认航班详情
+activate 支付界面
+支付界面 --> 乘客: 显示航班信息、乘客信息和费用详情
+支付界面 -> 订单管理: 创建订单请求
+activate 订单管理
+订单管理 -> 订单: 验证订单并创建
+activate 订单
+订单管理 --> 支付界面: 返回订单信息
+支付界面 --> 乘客: 显示订单详情和支付页面
+
+乘客 -> 支付界面: 选择支付方式
+支付界面 -> 订单管理: 发起支付请求
+
+alt 支付成功
+    订单管理 -> 订单: 更新订单状态为已支付
+    create 机票
+    订单管理 -> 机票: 生成机票
+    create 电子票据
+    订单管理 -> 电子票据: 生成电子票据
+    订单管理 --> 支付界面: 返回支付成功信息
+    支付界面 --> 乘客: 显示支付成功页面，提供电子票据下载链接
+    订单管理 --> 支付界面: 发送电子票据至旅客邮箱或App通知
+    支付界面 -> 订单: 确认订单支付完成
+    deactivate 订单
+else 支付失败
+    订单管理 --> 支付界面: 返回支付失败信息
+    支付界面 --> 乘客: 显示支付失败页面，提示支付失败原因
+    乘客 -> 支付界面: 选择其他支付方式或重试支付
+    支付界面 -> 订单管理: 重新发起支付请求
+end
+
+deactivate 订单管理
+
+opt 发送电子票据失败
+    loop 重试发送
+        订单管理 -> 支付界面: 尝试发送电子票据
+        alt 发送成功
+            break
+        end
+    end
+end
+deactivate 支付界面
+
+@enduml
