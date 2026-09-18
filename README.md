@@ -10,6 +10,8 @@
 
 <img width="209" height="209" alt="logo" src="https://github.com/user-attachments/assets/9fc73afc-2522-46a6-962d-880ca3173dca" />
 
+欢迎加入【计软学习互助群】（老登自建，绝无广告）：1016414397
+
 ## 写在前面
 <details>
   <summary>点击查看碎碎念</summary>
