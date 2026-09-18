@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.example.booksys.mapper.CommentMapper">
+
+    <select id="getAllComments" resultType="org.example.booksys.entities.CommentResponse">
+        SELECT *
+        FROM (
+                 SELECT t.*, ROW_NUMBER() OVER (ORDER BY t."comment_id") AS rn
+                 FROM (
+                          SELECT "comment_id", "user_id", "uname", "rating", "context", "comments"."create_time", "floor_id", "book_title", "comments"."book_id"
+                          FROM BOOKMAN."comments"
+                              left join BOOKMAN."user" on "comments"."user_id" = "user"."uid"
+                              left join BOOKMAN."book" on "comments"."book_id" = "book"."book_id"
+                      ) t
+             ) rt
+        WHERE rt.rn >= #{start} AND rt.rn &lt;= #{end}
+    </select>
+
+    <select id="getAllDeletedComments" resultType="org.example.booksys.entities.CommentResponse">
+        SELECT *
+        FROM (
+                 SELECT t.*, ROW_NUMBER() OVER (ORDER BY t."comment_id") AS rn
+                 FROM (
+                          SELECT "comment_id", "user_id", "uname", "rating", "context", "deleted_comments"."create_time", "floor_id", "book_title", "deleted_comments"."book_id"
+                          FROM BOOKMAN."deleted_comments"
+                                   left join BOOKMAN."user" on "deleted_comments"."user_id" = "user"."uid"
+                                   left join BOOKMAN."book" on "deleted_comments"."book_id" = "book"."book_id"
+                      ) t
+             ) rt
+        WHERE rt.rn >= #{start} AND rt.rn &lt;= #{end}
+    </select>
+
+    <select id="findCommentByBookId" resultType="org.example.booksys.entities.Comment">
+        SELECT *
+        FROM (
+            SELECT t.*, ROW_NUMBER() OVER (ORDER BY t."comment_id") AS rn
+                FROM (
+                    SELECT "comment_id", "user_id", "uname", "rating", "context", "create_time", "floor_id"
+                    FROM BOOKMAN."comments" left join BOOKMAN."user" on "comments"."user_id" = "user"."uid"
+                    where "book_id" = #{bookId}
+                    ) t
+            ) rt
+        WHERE rt.rn >= #{start} AND rt.rn &lt;= #{end}
+    </select>
+
+    <select id="findCommentByUserId" resultType="org.example.booksys.entities.Comment">
+        SELECT *
+        FROM (
+            SELECT t.*, ROW_NUMBER() OVER (ORDER BY t."comment_id") AS rn
+            FROM (
+                    SELECT "comment_id", "comments"."book_id", "rating", "context", "comments"."create_time", "floor_id"
+                    FROM BOOKMAN."comments" left join BOOKMAN."book" on "comments"."book_id" = "book"."book_id"
+                    where "user_id" = #{userId}
+                ) t
+        ) rt
+        WHERE rt.rn >= #{start} AND rt.rn &lt;= #{end}
+    </select>
+
+
+    <select id="getBookCommentCount">
+        select count(*)
+        from BOOKMAN."comments"
+        where "book_id" = #{bookId}
+    </select>
+
+    <select id="getUserCommentCount">
+        select count(*)
+        from BOOKMAN."comments"
+        where "user_id" = #{userId}
+    </select>
+
+    <select id="getCommentsCount" resultType="Integer">
+        SELECT count(*)
+        FROM BOOKMAN."comments"
+    </select>
+
+    <!-- 插入一本图书 -->
+    <insert id="addComment" parameterType="org.example.booksys.entities.Comment">
+        INSERT INTO BOOKMAN."comments" ("comment_id", "user_id", "book_id", "rating", "context", "create_time", "floor_id")
+        VALUES (#{commentId}, #{userId}, #{bookId}, #{rating}, #{context}, #{createTime}, #{floorId})
+    </insert>
+</mapper>

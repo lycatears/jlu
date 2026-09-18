@@ -1,0 +1,17 @@
+spring:
+  datasource:
+    url: jdbc:oracle:thin:@//localhost/orcl
+    username: BOOKMAN
+    password: lsw8261325027904
+    driver-class-name: oracle.jdbc.OracleDriver
+  application:
+    name: booksys
+  http:
+    multipart:
+      location: /data/temp
+mybatis:
+  type-handlers-package: org.example.booksys.utils
+  configuration:
+    map-underscore-to-camel-case: true
+server:
+  address: 0.0.0.0

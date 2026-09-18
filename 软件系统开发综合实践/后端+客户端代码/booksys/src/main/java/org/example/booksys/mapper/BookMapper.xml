@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.example.booksys.mapper.BookMapper">
+    <!-- 查询某本书及其所有标签 -->
+    <select id="getBook" resultMap="BookWithTagsResult">
+        SELECT b."book_id",
+               b."book_title",
+               b."book_isbn",
+               b."book_author",
+               b."book_year",
+               b."create_time",
+               b."stock",
+               b."description",
+               b."status",
+               t."tag_id",
+               t."tag_name"
+        FROM BOOKMAN."book" b
+                 LEFT JOIN BOOKMAN."book_tag" bt ON b."book_id" = bt."book_id"
+                 LEFT JOIN BOOKMAN."tags" t ON bt."tag_id" = t."tag_id"
+        WHERE b."book_id" = #{id}
+    </select>
+    
+    <select id="getPagedBooks" resultMap="BookWithTagsResult" resultType="org.example.booksys.entities.Book">
+        SELECT *
+        FROM (
+            SELECT t.*, ROW_NUMBER() OVER (ORDER BY t."book_id") AS rn
+                FROM (
+                    SELECT b."book_id",
+                        b."book_title",
+                        b."book_isbn",
+                        b."book_author",
+                        b."book_year",
+                        b."create_time",
+                        b."stock",
+                        b."description",
+                        b."status",
+                        t."tag_id",
+                        t."tag_name"
+                    FROM BOOKMAN."book" b
+                        LEFT JOIN BOOKMAN."book_tag" bt ON b."book_id" = bt."book_id"
+                        LEFT JOIN BOOKMAN."tags" t ON bt."tag_id" = t."tag_id"
+                    ) t
+            ) rt
+        WHERE rt.rn >= #{start} AND rt.rn &lt;= #{end}
+    </select>
+
+    <resultMap id="BookWithTagsResult" type="org.example.booksys.entities.Book">
+        <id property="bookId" column="book_id"/>
+        <result property="bookTitle" column="book_title"/>
+        <result property="bookIsbn" column="book_isbn"/>
+        <result property="bookAuthor" column="book_author"/>
+        <result property="bookYear" column="book_year"/>
+        <result property="bookStock" column="stock"/>
+        <result property="bookStatus" column="status"/>
+        <result property="createTime" column="create_time"/>
+        <result property="description" column="description"/>
+        <collection property="tags" ofType="org.example.booksys.entities.Tag">
+            <id property="tagId" column="tag_id"/>
+            <result property="tagName" column="tag_name"/>
+        </collection>
+    </resultMap>
+
+    <select id="getBooksCount" resultType="Integer">
+        SELECT count(*)
+        FROM BOOKMAN."book"
+    </select>
+
+    <!-- 插入一本图书 -->
+    <insert id="addBook" parameterType="org.example.booksys.entities.NewBook">
+        INSERT INTO BOOKMAN."book" ("book_id", "book_title", "book_isbn", "book_author", "book_year", "stock", "status",
+                                    "create_time", "description")
+        VALUES (#{bookId}, #{bookTitle}, #{bookIsbn}, #{bookAuthor}, #{bookYear}, #{bookStock}, #{bookStatus},
+                #{createTime},
+                #{description})
+    </insert>
+
+    <!-- 插入 book_tag 表（批量） -->
+<!--    <insert id="addBookTags">-->
+<!--        INSERT INTO BOOKMAN."book_tag" ("book_id", "tag_id")-->
+<!--        VALUES-->
+<!--        <foreach collection="tags" item="tagId" separator=",">-->
+<!--            (#{bookId}, #{tagId})-->
+<!--        </foreach>-->
+<!--    </insert>-->
+    <insert id="addBookTags">
+        INSERT INTO BOOKMAN."book_tag" ("book_id", "tag_id")
+        VALUES (#{bookId}, #{tagId})
+    </insert>
+
+    <update id="updateBook" parameterType="org.example.booksys.entities.Book">
+        UPDATE BOOKMAN."book"
+        <set>
+            <if test="bookTitle != null">
+                "book_title" = #{bookTitle},
+            </if>
+            <if test="bookIsbn != null">
+                "book_isbn" = #{bookIsbn},
+            </if>
+            <if test="bookAuthor != null">
+                "book_author" = #{bookAuthor},
+            </if>
+            <if test="bookYear != null">
+                "book_year" = #{bookYear},
+            </if>
+            <if test="bookStock != null">
+                "stock" = #{bookStock},
+            </if>
+            <if test="bookStatus != null">
+                "status" = #{bookStatus},
+            </if>
+            <if test="createTime != null">
+                "create_time" = #{createTime},
+            </if>
+            <if test="description != null">
+                "description" = #{description}
+            </if>
+        </set>
+        WHERE "book_id" = #{bookId}
+    </update>
+
+    <delete id="deleteBookTags">
+        DELETE FROM BOOKMAN."book_tag"
+        WHERE "book_id" = #{bookId}
+    </delete>
+
+    <select id="getPagedDeletedBooks" resultMap="BookWithTagsResult" resultType="org.example.booksys.entities.Book">
+        SELECT *
+        FROM (
+                 SELECT t.*, ROW_NUMBER() OVER (ORDER BY t."book_id") AS rn
+                 FROM (
+                          SELECT b."book_id",
+                                 b."book_title",
+                                 b."book_isbn",
+                                 b."book_author",
+                                 b."book_year",
+                                 b."create_time",
+                                 b."stock",
+                                 b."description",
+                                 b."status",
+                                 t."tag_id",
+                                 t."tag_name"
+                          FROM BOOKMAN."deleted_book" b
+                                   LEFT JOIN BOOKMAN."book_tag" bt ON b."book_id" = bt."book_id"
+                                   LEFT JOIN BOOKMAN."tags" t ON bt."tag_id" = t."tag_id"
+                      ) t
+             ) rt
+        WHERE rt.rn >= #{start} AND rt.rn &lt;= #{end}
+    </select>
+
+    <select id="getDeletedBook" resultMap="BookWithTagsResult">
+        SELECT b."book_id",
+               b."book_title",
+               b."book_isbn",
+               b."book_author",
+               b."book_year",
+               b."create_time",
+               b."stock",
+               b."description",
+               b."status",
+               t."tag_id",
+               t."tag_name"
+        FROM BOOKMAN."deleted_book" b
+                 LEFT JOIN BOOKMAN."book_tag" bt ON b."book_id" = bt."book_id"
+                 LEFT JOIN BOOKMAN."tags" t ON bt."tag_id" = t."tag_id"
+        WHERE b."book_id" = #{id}
+    </select>
+
+</mapper>

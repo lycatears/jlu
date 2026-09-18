@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.example.booksys.mapper.UserMapper">
+
+    <!-- 分页查询 -->
+    <select id="pageFindUser" resultType="org.example.booksys.entities.User">
+        SELECT *
+        FROM (SELECT t.*, ROWNUM rn
+              FROM BOOKMAN."user" t
+              WHERE ROWNUM &lt;= #{end}
+              ORDER BY "uid") rt
+        WHERE rn >= #{start}
+    </select>
+
+    <select id="getPagedDeletedUsers" resultType="org.example.booksys.entities.User">
+        SELECT *
+        FROM (SELECT t.*, ROWNUM rn
+              FROM BOOKMAN."deleted_user" t
+              WHERE ROWNUM &lt;= #{end}
+              ORDER BY "uid") rt
+        WHERE rn >= #{start}
+    </select>
+
+    <select id="searchUser" resultType="org.example.booksys.entities.User">
+        SELECT *
+        FROM BOOKMAN."user"
+        WHERE "uname" like '%' || #{keyword} || '%' or "email" like '%' || #{keyword} || '%'
+    </select>
+
+</mapper>

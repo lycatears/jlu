@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.example.booksys.mapper.ReportMapper">
+
+    <select id="getBookYears">
+        SELECT
+            TO_NUMBER(SUBSTR("book_year", 1, 4)) year,
+            COUNT(*) book_count
+        FROM
+            BOOKMAN."book"
+        GROUP BY
+            TO_NUMBER(SUBSTR("book_year", 1, 4))
+        ORDER BY
+            TO_NUMBER(SUBSTR("book_year", 1, 4))
+    </select>
+    
+    <select id="getBookTagCounts">
+        SELECT t."tag_name" tagName, COUNT(*) tagCount
+        FROM BOOKMAN."book_tag" bt
+        LEFT JOIN BOOKMAN."tags" t ON bt."tag_id" = t."tag_id"
+        GROUP BY t."tag_name"
+    </select>
+</mapper>

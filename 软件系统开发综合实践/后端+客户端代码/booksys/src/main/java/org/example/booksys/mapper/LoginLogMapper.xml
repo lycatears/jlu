@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.example.booksys.mapper.LoginLogMapper">
+
+    <!-- 分页查询 -->
+<!--    <select id="pageFindLog" resultType="org.example.booksys.entities.LoginLog">-->
+<!--        SELECT rt.*, ROWNUM rn-->
+<!--        FROM (SELECT t.*-->
+<!--              FROM BOOKMAN."login_log" t-->
+<!--              ORDER BY "id") rt-->
+<!--        WHERE rn >= #{start} AND rn &lt;= #{end}-->
+<!--    </select>-->
+    <select id="pageFindLog" resultType="org.example.booksys.entities.LoginLog">
+        SELECT *
+        FROM (
+        SELECT t.*, ROW_NUMBER() OVER (ORDER BY t."id") AS rn
+        FROM BOOKMAN."login_log" t
+        ) rt
+        WHERE rt.rn >= #{start} AND rt.rn &lt;= #{end}
+    </select>
+
+    <insert id="insertLog" parameterType="org.example.booksys.entities.LoginLog">
+        INSERT INTO BOOKMAN."login_log" ("time", "uid", "status", "ip")
+        VALUES (#{log.time, typeHandler=org.example.booksys.utils.DateStringTypeHandler}, #{log.uid},  #{log.status}, #{log.ip})
+    </insert>
+    
+    <select id="getLogCount">
+        SELECT count(*)
+        FROM BOOKMAN."login_log"
+    </select>
+
+</mapper>
